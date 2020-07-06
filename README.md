@@ -273,7 +273,7 @@ unbuffer program [arguments...] 2>&1 | tee -a outfile
 echo "data:$(file -b --mime-type somefile);base64,$(base64 somefile)"
 ```
 
-##Screen##
+## Screen
 
 **If the process is running on your computer, you’ll need to change your computer’s power settings so it won’t go to sleep and thus stopping your process.**  This is especially handy when you want a single long running process to do something on a remote computer (e.g. EC2) and not have to keep a terminal session active.  However, for repeating processings you'd like to schedule look into systemd or CRON.
 
@@ -316,7 +316,14 @@ https://askubuntu.com/questions/57477/bring-nohup-job-to-foreground
 Tmux is another possibility, not sure if it redirects stdout
 
 
-##VIM##
+## CRON JOBS
+
+```
+crontab -e
+crontab -l
+```
+
+## VIM
 
 **Edit file**
 
@@ -351,15 +358,7 @@ vimtutor
 ```
 
 
-##CRON JOBS##
-
-```
-crontab -e
-crontab -l
-```
-
-
-##SQLite3##
+## SQLite3
 
 First create db with structure:
 
@@ -399,7 +398,7 @@ INSERT INTO data_all values(2014-02-13,’active’,’3.0’);
 ```
 
 
-##Bash file for SQLite3##
+## Bash file for SQLite3
 
 Example of file contents for bash script that operates on SQLite3 db
 
@@ -440,7 +439,7 @@ done
 ```
 
 
-##Linux (commands may not work with all versions)##
+## Linux (commands may not work with all versions)
 
 
 **Shutdown:**
@@ -476,7 +475,7 @@ Ctrl+Atl +F2 (or F3-F6)
 Ctrl-Alt-F7
 ```
 
-##REFERENCES##
+## REFERENCES
  
 http://linux.about.com/library/cmd/blcmdl1_less.htm
 http://www.go2linux.org/head-Linux-command-to-display-the-benning-of-a-file
@@ -489,6 +488,3 @@ https://www.sqlite.org/sqlite.html
 http://hackgeo.com/foss/sqlite-how-to-import-csv
 http://sqlite.awardspace.info/syntax/sqlitepg02.htm
 http://stackoverflow.com/questions/2698108/count-columns-group-by
-
-
-

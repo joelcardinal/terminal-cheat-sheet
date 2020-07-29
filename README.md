@@ -447,19 +447,16 @@ done
 journalctl -u nginx
 ```
 
-**List by priority:**
+**[List by priority:](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#by-priority)**
 ```
 journalctl -p err -b
 ```
 Note the -b limits list from last boot
-https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#by-priority
 
-**List in plain text no pager like Less:**
+**[List in plain text no pager like Less:](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#output-to-standard-out)**
 ```
 journalctl --no-pager
 ```
-https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#output-to-standard-out
-
 
 **I commonly use this combination:**
 
@@ -467,42 +464,35 @@ https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-a
 journalctl -u logparser -b --no-pager
 ```
 
-**Output as JSON (there are other formats, "short" is the default output):**
+**[Output as JSON](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#output-formats) (there are other formats, "short" is the default output):**
 
 ```
 journalctl -b -u nginx -o json
 OR
 journalctl -b -u nginx -o json-pretty
 ```
-https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#output-formats
 
-**Follow while being written:**
+**[Follow while being written:](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#following-logs)**
 
 ```
 journalctl -f
 ```
-https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#following-logs
 
-
-**See disk usage of all logs:
+**[See disk usage of all logs:](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#finding-current-disk-usage)**
 
 ```
 journalctl --disk-usage
 ```
-https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#finding-current-disk-usage
 
-**Delete old logs:**
+**[Delete old logs:](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#deleting-old-logs)**
 
 ```
 sudo journalctl --vacuum-time=1years
 ```
-https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#deleting-old-logs
 
-**Limiting Journal Expansion:**
+**[Limiting Journal Expansion:](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#limiting-journal-expansion)**
 
 edit /etc/systemd/journald.conf
-
-https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#limiting-journal-expansion
 
 **More on controlling disk useage:**
 

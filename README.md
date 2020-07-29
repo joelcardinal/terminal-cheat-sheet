@@ -441,12 +441,11 @@ done
 ## Systemd's journal
 
 
-**List by service:**
+**[List by service:](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#by-unit)**
 
 ```
 journalctl -u nginx
 ```
-https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#by-unit
 
 **List by priority:**
 ```
@@ -500,7 +499,9 @@ sudo journalctl --vacuum-time=1years
 https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#deleting-old-logs
 
 **Limiting Journal Expansion:**
+
 edit /etc/systemd/journald.conf
+
 https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#limiting-journal-expansion
 
 **More on controlling disk useage:**

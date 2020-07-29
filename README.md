@@ -438,8 +438,83 @@ done
 # In the latter, nulls are filtered out
 ```
 
+## Systemd's journal
 
-## Linux (commands may not work with all versions)
+
+**List by service:**
+
+```
+journalctl -u nginx
+```
+https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#by-unit
+
+**List by priority:**
+```
+journalctl -p err -b
+```
+Note the -b limits list from last boot
+https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#by-priority
+
+**List in plain text no pager like Less:**
+```
+journalctl --no-pager
+```
+https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#output-to-standard-out
+
+
+**I commonly use this combination:**
+
+```
+journalctl -u logparser -b --no-pager
+```
+
+**Output as JSON (there are other formats, "short" is the default output):**
+
+```
+journalctl -b -u nginx -o json
+OR
+journalctl -b -u nginx -o json-pretty
+```
+https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#output-formats
+
+**Follow while being written:**
+
+```
+journalctl -f
+```
+https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#following-logs
+
+
+**See disk usage of all logs:
+
+```
+journalctl --disk-usage
+```
+https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#finding-current-disk-usage
+
+**Delete old logs:**
+
+```
+sudo journalctl --vacuum-time=1years
+```
+https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#deleting-old-logs
+
+**Limiting Journal Expansion:**
+edit /etc/systemd/journald.conf
+https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs#limiting-journal-expansion
+
+**More on controlling disk useage:**
+
+https://help.univention.com/t/problem-systemd-journald-does-not-honor-systemmaxuse-settings-for-journal-space/10747
+
+https://www.reddit.com/r/archlinux/comments/af7vcz/journald_set_systemmaxuse_or_leave_the_default/
+
+https://falkus.co/2019/05/logging-a-lot-in-journald/
+
+https://blog.selectel.com/managing-logging-systemd/#:~:text=Log%20rotation%20can%20also%20be,free%20after%20logs%20are%20saved
+
+
+## Misc. Linux commands (may not work with all versions)
 
 
 **Shutdown:**

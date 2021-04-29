@@ -345,6 +345,14 @@ vimtutor
 :%d
 ```
 
+**Find and replace all occurences:**
+
+Replaces all occurences of foo with bar
+
+```
+:%s/foo/bar/g
+```
+
 **Your personal Vim initializations (customizations):**
 
 ```

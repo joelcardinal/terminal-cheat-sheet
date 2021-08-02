@@ -181,6 +181,18 @@ sed -n -e 1,2p -e 4p somefile.txt
 tail -10 somefile.txt
 ```
 
+**Get first 10 lines of file**
+
+```
+head -10 somefile.txt
+```
+
+**Keep line up to string or character
+
+```
+awk -FMYSTRING '{print $1}'
+```
+
 **Get files by string in directory “archive”**
 
 ```
@@ -219,10 +231,15 @@ echo $line;
 sort file1.csv > file2.csv
 ```
 
-**Sort & Unique:**
+**Unique:**
 
 ```
-sort file1.csv | uniq > file2.csv
+cat file1.csv | uniq > file2.csv
+```
+OR
+
+```
+cat file1.csv | sort -u > file2.csv
 ```
 
 **Remove “ (double-quote in this example could be any character):**

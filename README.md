@@ -211,6 +211,14 @@ grep -nr 'myString'
 grep -HEroine 'searchstring' *
 ```
 
+*H = Always print filename headers with output lines.
+*E = Interpret pattern as an extended regular expression (i.e. force grep to behave as egrep).
+*r = Recursively search subdirectories listed.
+*o = Prints only the matching part of the lines.
+*i = Perform case insensitive matching.  By default, grep is case sensitive.
+*n = Each output line is preceded by its relative line number in the file, starting at line 1.  The line number counter is reset for each file processed.
+*e = regex pattern
+
 **Get number of lines in file:**
 
 ```

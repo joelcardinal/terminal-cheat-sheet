@@ -175,6 +175,13 @@ sed -n 2,4p somefile.txt
 sed -n -e 1,2p -e 4p somefile.txt
 ```
 
+**Append string to each line in file**
+
+```
+sed -i s/$/:80/ file.txt # inline
+sed s/$/:80/ file.txt > another_file.txt # in separate file
+```
+
 **Get last 10 lines of file**
 
 ```

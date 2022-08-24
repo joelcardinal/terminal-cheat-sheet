@@ -216,6 +216,8 @@ grep -nr 'myString'
 
 ```
 grep -HEroine 'searchstring' *
+
+grep -HErie 'live-agent' * | grep 'decoded/assets/crocs_fr'
 ```
 
 *H = Always print filename headers with output lines.

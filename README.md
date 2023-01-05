@@ -200,6 +200,77 @@ head -10 somefile.txt
 awk -FMYSTRING '{print $1}'
 ```
 
+**Get RAM memory usage
+
+```
+free
+```
+
+**Get disk usage, hardrive space
+
+```
+df -h
+```
+
+
+**list tags and messages
+
+```
+git tag -l --format='%(tag) %(subject)'
+```
+
+**file size of dir
+
+```
+du -hs PATHTODIR
+```
+
+**request (header) size via curl
+
+```
+ --write-out '\n\n size_request:%{size_request} \n\nsize_upload: %{size_upload}'
+ ```
+ 
+**force kill
+
+```
+ps -ax
+kill PIDNUM
+```
+
+**show file list with full time code
+
+```
+ls -lT
+```
+
+** Prepare xml for zip and import:
+** remove Mac temp files
+
+```
+find . -name '*.DS_Store' -type f -delete
+```
+
+** zip
+
+```
+cd path/to/directory
+zip -r backup-20140511060001.zip backup-20140511060001
+# use zip -er to password protect
+```
+
+**last 300 lines of file
+
+```
+tail -300 filepath
+```
+
+**Is not either string
+
+```
+^((?!(abc|def)).)*$
+```
+
 **Get files by string in directory “archive”**
 
 ```

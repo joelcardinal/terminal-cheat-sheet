@@ -289,6 +289,13 @@ grep -nr 'myString'
 grep -HEroine 'searchstring' *
 
 grep -HErie 'live-agent' * | grep 'decoded/assets/crocs_fr'
+
+# grep search | filter to decoded | remove unnecessary string portion | remove everything after ":" (code) | filter to unique
+grep -HErie 'live-agent' * | grep 'decoded/assets' | sed s/"assets_and_slots\/decoded\/"/""/ | cut -f1 -d":" | sort -u
+grep -HErie 'live-agent' * | grep 'decoded/slots' | sed s/"assets_and_slots\/decoded\/"/""/ | cut -f1 -d":" | sort -u
+grep -HErie 'js-chat-text' * | grep 'decoded/slots' | sed s/"assets_and_slots\/decoded\/"/""/ | cut -f1 -d":" | sort -u
+grep -HErie 'js-chat-text' * | grep 'decoded/assets' | sed s/"assets_and_slots\/decoded\/"/""/ | cut -f1 -d":" | sort -u
+
 ```
 
 *H = Always print filename headers with output lines.

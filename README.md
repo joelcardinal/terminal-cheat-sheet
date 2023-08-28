@@ -113,6 +113,15 @@ scp capistrano@appdev03:/path/dw_build.sh dw_build.sh
 
 ```
 scp -r capistrano@appdev03:/path/to/directory .
+
+```
+
+**Copies directory from remote to a specific local directory location:**
+
+```
+
+scp -i /Users/jc/Documents/PEMs/joelcardinal.pem -r jc@ec2-54-202-555-555.us-west-2.compute.amazonaws.com:crocs-configs-linux2 /Users/jcardinal/Downloads/20230818_staging_certs
+
 ```
 
 **Copy single file from external source to the currently active local directory (note the period):**
@@ -120,6 +129,29 @@ scp -r capistrano@appdev03:/path/to/directory .
 ```
 scp capistrano@appdev03:google_trusted/cpo_gtrust_shipments_F.txt .
 ```
+
+Extract key from p12
+
+If you want to save the key without a passphrase, add -nodes (no DES) before the -out.
+
+```
+
+openssl pkcs12 -in filename.pfx -nocerts -out filename.key
+
+```
+
+Extract crt from p12
+
+```
+
+openssl pkcs12 -in filename.pfx -clcerts -nokeys -out filename.crt
+
+```
+
+https://serverfault.com/questions/413832/generate-key-and-crt-from-pkcs12-file
+https://www.ssl.com/how-to/export-certificates-private-key-from-pkcs12-file-with-openssl/
+https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs
+
 
 **Opens currently active directory in Finder:**
 

@@ -103,6 +103,18 @@ less filename
 diff -r /path/file1 /path/file2
 ```
 
+**Compare first column (comma separated) of two files:**
+
+```
+diff  <(awk -F ',' '{print $1}' file1.txt | sort -u) <(awk -F ',' '{print $1}' file2.txt | sort -u) | sort | grep '^[>|<]'
+```
+
+**Use paste to have terminal print delimiter separated instead of new line list (here using pipe):**
+
+```
+ls | paste -sd\| -
+```
+
 **copy remote files on capistrano to local hd:**
 
 ```

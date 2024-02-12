@@ -718,4 +718,4 @@ https://www.sqlite.org/sqlite.html
 http://hackgeo.com/foss/sqlite-how-to-import-csv
 http://sqlite.awardspace.info/syntax/sqlitepg02.htm
 http://stackoverflow.com/questions/2698108/count-columns-group-by
-Common OpenSSL commands https://gist.github.com/roustem/7bba3af5c0a9d8ba331b216bc1b2edfe
+https://gist.github.com/roustem/7bba3af5c0a9d8ba331b216bc1b2edfe Common OpenSSL commands 

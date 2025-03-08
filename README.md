@@ -244,6 +244,23 @@ head -10 somefile.txt
 awk -FMYSTRING '{print $1}'
 ```
 
+**XKCD Password Generator - Linux
+
+```
+shuf -n 5 /usr/share/dict/words
+```
+
+**XKCD Password Generator - Mac
+
+```
+cat /usr/share/dict/words | sort --unique --random-sort | head -n 5
+```
+with join
+
+```
+cat /usr/share/dict/words | sort --unique --random-sort | head -n 5 | paste -sd"-" -
+```
+
 **Get RAM memory usage
 
 ```
